@@ -4,9 +4,9 @@ services:
   grafana:
     image: grafana/grafana
     container_name: grafana
-    restart: never
+    restart: "no"
     ports:
-      - 3000:3000
+      - 3100:3000
     networks:
       - monitoring
     volumes:
@@ -15,7 +15,7 @@ services:
   influxdb:
     image: influxdb
     container_name: influxdb
-    restart: never
+    restart: "no"
     ports:
       - 8086:8086
     networks:
